@@ -1,0 +1,134 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Internal", "Internal", "{BCC0FB4E-6D23-4ED3-A155-07A171B50A2C}"
+	ProjectSection(SolutionItems) = preProject
+		Internal\.editorconfig = Internal\.editorconfig
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{884957E8-7BA1-4065-B7ED-A5164158DB08}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dlls", "Dlls", "{BA20562B-3493-4C25-9DD2-3216AFCE4557}"
+	ProjectSection(SolutionItems) = preProject
+		Dlls\ABOUT.md = Dlls\ABOUT.md
+		Dlls\SLSRMLibrary.dll = Dlls\SLSRMLibrary.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CompanionFiles", "CompanionFiles", "{412C2D29-0B64-4B1D-87A1-78DB5327B6DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Skyline DataMiner", "Skyline DataMiner", "{7CC07AD7-D735-4119-9D84-EF48BC49FBAD}"
+	ProjectSection(SolutionItems) = preProject
+		CompanionFiles\Skyline DataMiner\AboutThisFolder.md = CompanionFiles\Skyline DataMiner\AboutThisFolder.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{002F863B-E8CC-4C63-9A71-0BEF50D53EA8}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\ABOUT.md = Documentation\ABOUT.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F8938D60-51A0-4880-9CFC-19C66379BB5D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code Analysis", "Code Analysis", "{41471A06-EFFF-4500-8B1D-E3F6770CB8DB}"
+	ProjectSection(SolutionItems) = preProject
+		Internal\Code Analysis\qaction-debug.ruleset = Internal\Code Analysis\qaction-debug.ruleset
+		Internal\Code Analysis\qaction-release.ruleset = Internal\Code Analysis\qaction-release.ruleset
+		Internal\Code Analysis\stylecop.json = Internal\Code Analysis\stylecop.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reference", "Reference", "{D53A6F2A-28C6-4B37-94DB-305F1CE04268}"
+	ProjectSection(SolutionItems) = preProject
+		Reference\Generic Test Element Protocol.xml = Reference\Generic Test Element Protocol.xml
+		Reference\SRM_FunctionDefinition_SkylineGenericTeputMux(SkylineGenericTestElement)_1.0.0.1_active.dmapp = Reference\SRM_FunctionDefinition_SkylineGenericTeputMux(SkylineGenericTestElement)_1.0.0.1_active.dmapp
+		Reference\SRM_FunctionDefinition_SkylineGenericTtputMux(SkylineGenericTestElement)_1.0.0.1_active.dmapp = Reference\SRM_FunctionDefinition_SkylineGenericTtputMux(SkylineGenericTestElement)_1.0.0.1_active.dmapp
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CreateResourceOrchestrationBooking", "CreateResourceOrchestrationBooking", "{027F6475-74E9-4DF2-9CFD-7588B33EB2C1}"
+	ProjectSection(SolutionItems) = preProject
+		CreateResourceOrchestrationBooking.xml = CreateResourceOrchestrationBooking.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Actions", "Actions", "{A4B1439B-5544-436D-B94A-E7A1106EB9CF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreateResourceOrchestrationBooking_1", "CreateResourceOrchestrationBooking_1\CreateResourceOrchestrationBooking_1.csproj", "{4CBE4893-4398-4D4E-A613-13CB9985FD83}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SRM_Empty_PLS", "SRM_Empty_PLS", "{FB72D362-6B94-48AD-ADF6-0CA65A04A81D}"
+	ProjectSection(SolutionItems) = preProject
+		SRM_Empty_PLS.xml = SRM_Empty_PLS.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Actions", "Actions", "{461D16A4-1AB9-411D-8DB3-95DDC300E2E0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SRM_Empty_PLS_4", "SRM_Empty_PLS_4\SRM_Empty_PLS_4.csproj", "{C51BEDBD-80A8-4E42-9266-13C97D8A87AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SRM_MUX PLS Sample", "SRM_MUX PLS Sample", "{FB1CFE48-4E0D-469F-81BA-8BF968A469A5}"
+	ProjectSection(SolutionItems) = preProject
+		SRM_MUX PLS Sample.xml = SRM_MUX PLS Sample.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Actions", "Actions", "{EAAE8582-169E-4734-B2AB-3551EC50D39E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SRM_MUX PLS Sample_4", "SRM_MUX PLS Sample_4\SRM_MUX PLS Sample_4.csproj", "{34331B44-EBA2-4986-ABA5-BDF9997CAEE3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SRM_MUX LSO Sample", "SRM_MUX LSO Sample", "{FD566C45-1C75-4E69-8B11-F10527D8EBD3}"
+	ProjectSection(SolutionItems) = preProject
+		SRM_MUX LSO Sample.xml = SRM_MUX LSO Sample.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Actions", "Actions", "{70C8267B-AC72-467B-9230-28982F50BCB0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SRM_MUX LSO Sample_1", "SRM_MUX LSO Sample_1\SRM_MUX LSO Sample_1.csproj", "{A1860FF5-C83B-47ED-B438-4A7E988AC35C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6E77CC58-E0A9-47E4-86EC-66457568056D}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CBE4893-4398-4D4E-A613-13CB9985FD83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CBE4893-4398-4D4E-A613-13CB9985FD83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CBE4893-4398-4D4E-A613-13CB9985FD83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CBE4893-4398-4D4E-A613-13CB9985FD83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C51BEDBD-80A8-4E42-9266-13C97D8A87AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C51BEDBD-80A8-4E42-9266-13C97D8A87AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C51BEDBD-80A8-4E42-9266-13C97D8A87AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C51BEDBD-80A8-4E42-9266-13C97D8A87AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34331B44-EBA2-4986-ABA5-BDF9997CAEE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34331B44-EBA2-4986-ABA5-BDF9997CAEE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34331B44-EBA2-4986-ABA5-BDF9997CAEE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34331B44-EBA2-4986-ABA5-BDF9997CAEE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1860FF5-C83B-47ED-B438-4A7E988AC35C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1860FF5-C83B-47ED-B438-4A7E988AC35C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1860FF5-C83B-47ED-B438-4A7E988AC35C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1860FF5-C83B-47ED-B438-4A7E988AC35C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7CC07AD7-D735-4119-9D84-EF48BC49FBAD} = {412C2D29-0B64-4B1D-87A1-78DB5327B6DE}
+		{41471A06-EFFF-4500-8B1D-E3F6770CB8DB} = {BCC0FB4E-6D23-4ED3-A155-07A171B50A2C}
+		{027F6475-74E9-4DF2-9CFD-7588B33EB2C1} = {884957E8-7BA1-4065-B7ED-A5164158DB08}
+		{A4B1439B-5544-436D-B94A-E7A1106EB9CF} = {027F6475-74E9-4DF2-9CFD-7588B33EB2C1}
+		{4CBE4893-4398-4D4E-A613-13CB9985FD83} = {A4B1439B-5544-436D-B94A-E7A1106EB9CF}
+		{FB72D362-6B94-48AD-ADF6-0CA65A04A81D} = {884957E8-7BA1-4065-B7ED-A5164158DB08}
+		{461D16A4-1AB9-411D-8DB3-95DDC300E2E0} = {FB72D362-6B94-48AD-ADF6-0CA65A04A81D}
+		{C51BEDBD-80A8-4E42-9266-13C97D8A87AC} = {461D16A4-1AB9-411D-8DB3-95DDC300E2E0}
+		{FB1CFE48-4E0D-469F-81BA-8BF968A469A5} = {884957E8-7BA1-4065-B7ED-A5164158DB08}
+		{EAAE8582-169E-4734-B2AB-3551EC50D39E} = {FB1CFE48-4E0D-469F-81BA-8BF968A469A5}
+		{34331B44-EBA2-4986-ABA5-BDF9997CAEE3} = {EAAE8582-169E-4734-B2AB-3551EC50D39E}
+		{FD566C45-1C75-4E69-8B11-F10527D8EBD3} = {884957E8-7BA1-4065-B7ED-A5164158DB08}
+		{70C8267B-AC72-467B-9230-28982F50BCB0} = {FD566C45-1C75-4E69-8B11-F10527D8EBD3}
+		{A1860FF5-C83B-47ED-B438-4A7E988AC35C} = {70C8267B-AC72-467B-9230-28982F50BCB0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C88A0D6C-B2FF-4DA2-A4CD-F14DC50A65F8}
+	EndGlobalSection
+EndGlobal

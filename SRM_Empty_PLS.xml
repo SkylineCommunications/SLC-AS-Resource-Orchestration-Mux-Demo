@@ -1,0 +1,32 @@
+﻿<DMSScript options="272" xmlns="http://www.skyline.be/automation">
+	<Name>SRM_Empty_PLS</Name>
+	<Description>An empty PLS Script</Description>
+	<Type>Automation</Type>
+	<Author>Administrador</Author>
+	<CheckSets>FALSE</CheckSets>
+	<Folder>Tests</Folder>
+	<Protocols>
+		<Protocol id="1">
+			<Description>FunctionDve</Description>
+			<Name>Skyline Generic Test Element.Input Mux (Skyline Generic Test Element)</Name>
+			<Version>Production</Version>
+			<DefaultElement></DefaultElement>
+		</Protocol>
+	</Protocols>
+	<Memory>
+	</Memory>
+	<Parameters>
+		<ScriptParameter id="2" type="string" values="">
+			<Description>Info</Description>
+		</ScriptParameter>
+		<ScriptParameter id="3" type="string" values="">
+			<Description>ProfileInstance</Description>
+		</ScriptParameter>
+	</Parameters>
+	<Script>
+		<Exe id="4" type="csharp">
+			<Value><![CDATA[[Project:SRM_Empty_PLS_4]]]></Value>
+			<Message></Message>
+		</Exe>
+	</Script>
+</DMSScript>

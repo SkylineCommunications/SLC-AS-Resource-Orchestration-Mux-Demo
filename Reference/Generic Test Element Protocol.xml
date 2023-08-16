@@ -1,0 +1,1892 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+****************************************************************************
+*  Copyright (c) 2022,  Skyline Communications NV  All Rights Reserved.    *
+****************************************************************************
+
+By using this driver, you expressly agree with the usage terms and
+conditions set out below.
+This driver and all related materials are protected by copyrights and
+other intellectual property rights that exclusively belong
+to Skyline Communications.
+
+A user license granted for this driver is strictly for personal use only.
+This driver may not be used in any way by anyone without the prior
+written consent of Skyline Communications. Any sublicensing of this
+driver is forbidden.
+
+Any modifications to this driver by the user are only allowed for
+personal use and within the intended purpose of the driver,
+and will remain the sole responsibility of the user.
+Skyline Communications will not be responsible for any damages or
+malfunctions whatsoever of the driver resulting from a modification
+or adaptation by the user.
+
+The content of this driver is confidential information.
+The user hereby agrees to keep this confidential information strictly
+secret and confidential and not to disclose or reveal it, in whole
+or in part, directly or indirectly to any person, entity, organization
+or administration without the prior written consent of
+Skyline Communications.
+
+Any inquiries can be addressed to:
+
+	Skyline Communications NV
+	Ambachtenstraat 33
+	B-8870 Izegem
+	Belgium
+	Tel.	: +32 51 31 35 69
+	Fax.	: +32 51 31 01 29
+	E-mail	: info@skyline.be
+	Web		: www.skyline.be
+	Contact	: Ben Vandenberghe
+
+
+
+Revision History (auto generated):
+
+DATE          VERSION    AUTHOR                         COMMENTS
+
+25/08/2022    1.0.0.2    GMV, Skyline Communications    NF: Initial version
+                                                        NF: Added generic input and output mux tables
+-->
+<Protocol xmlns="http://www.skyline.be/protocol">
+	<Name>Skyline Generic Test Element</Name>
+	<Description>Skyline Generic Test Element Driver</Description>
+	<Version>1.0.0.2</Version>
+	<IntegrationID>DMS-DRV-9999</IntegrationID>
+	<Provider>Skyline Communications</Provider>
+	<Vendor>Skyline Communications</Vendor>
+	<VendorOID>1.3.6.1.4.1.8813.2.99</VendorOID>
+	<DeviceOID>99</DeviceOID>
+	<ElementType>Generic</ElementType>
+	<Type relativeTimers="true">virtual</Type>
+	<Display defaultPage="General" pageOrder="General;Table;Generic Mux" wideColumnPages="Table;Generic Mux"/>
+	<SNMP includepages="true">auto</SNMP>
+	<Compliancies>
+		<CassandraReady>true</CassandraReady>
+	</Compliancies>
+	<Params>
+		<Param id="2">
+			<Name>AfterStartup</Name>
+			<Description>After Startup</Description>
+			<Type>dummy</Type>
+		</Param>
+		<Param id="1000" trending="false" save="true">
+			<Name>General Status A</Name>
+			<Description>General Status A</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>A general discreet parameter</Subtext>
+			</Information>
+			<Measurement>
+				<Type>discreet</Type>
+				<Discreets>
+					<Discreet>
+						<Value>0</Value>
+						<Display>Ok</Display>
+					</Discreet>
+					<Discreet>
+						<Value>1</Value>
+						<Display>NA</Display>
+					</Discreet>
+					<Discreet>
+						<Value>2</Value>
+						<Display>Error</Display>
+					</Discreet>
+					<Discreet>
+						<Value>3</Value>
+						<Display>Available</Display>
+					</Discreet>
+					<Discreet>
+						<Value>4</Value>
+						<Display>Offline</Display>
+					</Discreet>
+				</Discreets>
+			</Measurement>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<LengthType>next param</LengthType>
+				<Type>double</Type>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>3</Row>
+					</Position>
+				</Positions>
+			</Display>
+		</Param>
+		<Param id="1100" setter="true">
+			<Name>General Status A</Name>
+			<Description>General Status A</Description>
+			<Type>write</Type>
+			<Measurement>
+				<Type>discreet</Type>
+				<Discreets>
+					<Discreet>
+						<Value>0</Value>
+						<Display>Ok</Display>
+					</Discreet>
+					<Discreet>
+						<Value>1</Value>
+						<Display>NA</Display>
+					</Discreet>
+					<Discreet>
+						<Value>2</Value>
+						<Display>Error</Display>
+					</Discreet>
+					<Discreet>
+						<Value>3</Value>
+						<Display>Available</Display>
+					</Discreet>
+					<Discreet>
+						<Value>4</Value>
+						<Display>Offline</Display>
+					</Discreet>
+				</Discreets>
+			</Measurement>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<LengthType>next param</LengthType>
+				<Type>double</Type>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>3</Row>
+					</Position>
+				</Positions>
+			</Display>
+		</Param>
+		<Param id="1001" trending="false" save="true">
+			<Name>General Status B</Name>
+			<Description>General Status B</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>A general discreet parameter</Subtext>
+			</Information>
+			<Measurement>
+				<Type>discreet</Type>
+				<Discreets>
+					<Discreet>
+						<Value>0</Value>
+						<Display>Ok</Display>
+					</Discreet>
+					<Discreet>
+						<Value>1</Value>
+						<Display>NA</Display>
+					</Discreet>
+					<Discreet>
+						<Value>2</Value>
+						<Display>Error</Display>
+					</Discreet>
+					<Discreet>
+						<Value>3</Value>
+						<Display>Available</Display>
+					</Discreet>
+					<Discreet>
+						<Value>4</Value>
+						<Display>Offline</Display>
+					</Discreet>
+				</Discreets>
+			</Measurement>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<LengthType>next param</LengthType>
+				<Type>double</Type>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>1</Column>
+						<Row>3</Row>
+					</Position>
+				</Positions>
+			</Display>
+		</Param>
+		<Param id="1101" setter="true">
+			<Name>General Status B</Name>
+			<Description>General Status B</Description>
+			<Type>write</Type>
+			<Measurement>
+				<Type>discreet</Type>
+				<Discreets>
+					<Discreet>
+						<Value>0</Value>
+						<Display>Ok</Display>
+					</Discreet>
+					<Discreet>
+						<Value>1</Value>
+						<Display>NA</Display>
+					</Discreet>
+					<Discreet>
+						<Value>2</Value>
+						<Display>Error</Display>
+					</Discreet>
+					<Discreet>
+						<Value>3</Value>
+						<Display>Available</Display>
+					</Discreet>
+					<Discreet>
+						<Value>4</Value>
+						<Display>Offline</Display>
+					</Discreet>
+				</Discreets>
+			</Measurement>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<LengthType>next param</LengthType>
+				<Type>double</Type>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>1</Column>
+						<Row>3</Row>
+					</Position>
+				</Positions>
+			</Display>
+		</Param>
+		<Param id="1002" trending="false" save="true">
+			<Name>General Value A</Name>
+			<Description>General Value A</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>General numeric value</Subtext>
+			</Information>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<LengthType>next param</LengthType>
+				<Type>double</Type>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+		</Param>
+		<Param id="1102" setter="true">
+			<Name>General Value A</Name>
+			<Description>General Value A</Description>
+			<Type>write</Type>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<LengthType>next param</LengthType>
+				<Type>double</Type>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+		</Param>
+		<Param id="1003" trending="false" save="true">
+			<Name>General Value B</Name>
+			<Description>General Value B</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>General numeric value</Subtext>
+			</Information>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<LengthType>next param</LengthType>
+				<Type>double</Type>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>1</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+		</Param>
+		<Param id="1103" setter="true">
+			<Name>General Value B</Name>
+			<Description>General Value B</Description>
+			<Type>write</Type>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<LengthType>next param</LengthType>
+				<Type>double</Type>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>1</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+		</Param>
+		<Param id="1004" trending="false" save="true">
+			<Name>General Value C</Name>
+			<Description>General Value C</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>General numeric value</Subtext>
+			</Information>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<LengthType>next param</LengthType>
+				<Type>double</Type>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
+			</Display>
+		</Param>
+		<Param id="1104" setter="true">
+			<Name>General Value C</Name>
+			<Description>General Value C</Description>
+			<Type>write</Type>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<LengthType>next param</LengthType>
+				<Type>double</Type>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
+			</Display>
+		</Param>
+		<Param id="1005" trending="false" save="true">
+			<Name>General Value D</Name>
+			<Description>General Value D</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>General numeric value</Subtext>
+			</Information>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<LengthType>next param</LengthType>
+				<Type>double</Type>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>1</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
+			</Display>
+		</Param>
+		<Param id="1105" setter="true">
+			<Name>General Value D</Name>
+			<Description>General Value D</Description>
+			<Type>write</Type>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<LengthType>next param</LengthType>
+				<Type>double</Type>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>1</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
+			</Display>
+		</Param>
+		<Param id="1006" trending="false" save="true">
+			<Name>General Text A</Name>
+			<Description>General Text A</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>General text parameter</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<LengthType>next param</LengthType>
+				<Type>string</Type>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+			</Alarm>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>5</Row>
+					</Position>
+				</Positions>
+			</Display>
+		</Param>
+		<Param id="1106" setter="true">
+			<Name>General Text A</Name>
+			<Description>General Text A</Description>
+			<Type>write</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<LengthType>next param</LengthType>
+				<Type>string</Type>
+			</Interprete>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>5</Row>
+					</Position>
+				</Positions>
+			</Display>
+		</Param>
+		<Param id="1007" trending="false" save="true">
+			<Name>General Text B</Name>
+			<Description>General Text B</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>General text parameter</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<LengthType>next param</LengthType>
+				<Type>string</Type>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+			</Alarm>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>1</Column>
+						<Row>5</Row>
+					</Position>
+				</Positions>
+			</Display>
+		</Param>
+		<Param id="1107" setter="true">
+			<Name>General Text B</Name>
+			<Description>General Text B</Description>
+			<Type>write</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<LengthType>next param</LengthType>
+				<Type>string</Type>
+			</Interprete>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>1</Column>
+						<Row>5</Row>
+					</Position>
+				</Positions>
+			</Display>
+		</Param>
+		<Param id="1008" trending="false" save="true">
+			<Name>General Text C</Name>
+			<Description>General Text C</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>General text parameter</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<LengthType>next param</LengthType>
+				<Type>string</Type>
+			</Interprete>
+			<Measurement>
+				<Type lines="5">string</Type>
+			</Measurement>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>6</Row>
+					</Position>
+				</Positions>
+			</Display>
+		</Param>
+		<Param id="1108" setter="true">
+			<Name>General Text C</Name>
+			<Description>General Text C</Description>
+			<Type>write</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<LengthType>next param</LengthType>
+				<Type>string</Type>
+			</Interprete>
+			<Measurement>
+				<Type lines="5">string</Type>
+			</Measurement>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>6</Row>
+					</Position>
+				</Positions>
+			</Display>
+		</Param>
+		<Param id="1009" trending="false" save="true">
+			<Name>General Text D</Name>
+			<Description>General Text D</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>General text parameter</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<LengthType>next param</LengthType>
+				<Type>string</Type>
+			</Interprete>
+			<Measurement>
+				<Type lines="5">string</Type>
+			</Measurement>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>1</Column>
+						<Row>6</Row>
+					</Position>
+				</Positions>
+			</Display>
+		</Param>
+		<Param id="1109" setter="true">
+			<Name>General Text D</Name>
+			<Description>General Text D</Description>
+			<Type>write</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<LengthType>next param</LengthType>
+				<Type>string</Type>
+			</Interprete>
+			<Measurement>
+				<Type lines="5">string</Type>
+			</Measurement>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>1</Column>
+						<Row>6</Row>
+					</Position>
+				</Positions>
+			</Display>
+		</Param>
+		<Param id="2000">
+			<Name>GenericTable</Name>
+			<Description>Generic Table</Description>
+			<Type>array</Type>
+			<ArrayOptions index="0">
+				<ColumnOption idx="0" pid="2001" type="retrieved" options=""/>
+				<ColumnOption idx="1" pid="2002" type="retrieved" value="" options=";save"/>
+				<ColumnOption idx="2" pid="2003" type="retrieved" value="" options=";save"/>
+				<ColumnOption idx="3" pid="2004" type="retrieved" value="" options=";save"/>
+				<ColumnOption idx="4" pid="2005" type="retrieved" value="" options=";save;disableHeaderSum;enableHistogram;enableHeatmap"/>
+				<ColumnOption idx="5" pid="2006" type="retrieved" value="" options=";save;enableHeaderAvg;enableHistogram;enableHeatmap"/>
+				<ColumnOption idx="6" pid="2007" type="retrieved" value="" options=";save"/>
+				<ColumnOption idx="7" pid="2030" type="retrieved" value="" options=";save"/>
+			</ArrayOptions>
+			<Information>
+				<Subtext>tableInformation</Subtext>
+			</Information>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Table</Page>
+						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="tab=columns:2001|0-2002|1-2003|2-2007|6-2004|3-2005|4-2006|5-2030|7,width:100-100-100-100-100-154-119-118,sort:STRING-STRING-INT-STRING-STRING-INT-INT-STRING,lines:25,filter:true">table</Type>
+			</Measurement>
+		</Param>
+		<Param id="2001" trending="false">
+			<Name>GenericTableInstance</Name>
+			<Description>Instance (Generic Table)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>This is the key used internally by DataMiner to identify the table entries.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="2002" trending="false">
+			<Name>Name</Name>
+			<Description>Name (Generic Table)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>Text column</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<LengthType>next param</LengthType>
+				<Type>string</Type>
+			</Interprete>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+		</Param>
+		<Param id="2102" setter="true">
+			<Name>Name</Name>
+			<Description>Name (Generic Table)</Description>
+			<Type>write</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<LengthType>next param</LengthType>
+				<Type>string</Type>
+			</Interprete>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+		</Param>
+		<Param id="2003" trending="false">
+			<Name>Description</Name>
+			<Description>Description (Generic Table)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>Text column</Subtext>
+			</Information>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+			<Interprete>
+				<RawType>other</RawType>
+				<LengthType>next param</LengthType>
+				<Type>string</Type>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+		</Param>
+		<Param id="2103" setter="true">
+			<Name>Description</Name>
+			<Description>Description (Generic Table)</Description>
+			<Type>write</Type>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+			<Interprete>
+				<RawType>other</RawType>
+				<LengthType>next param</LengthType>
+				<Type>string</Type>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+		</Param>
+		<Param id="2004" trending="true">
+			<Name>Status</Name>
+			<Description>Status (Generic Table)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>Discreet column</Subtext>
+			</Information>
+			<Measurement>
+				<Type>discreet</Type>
+				<Discreets>
+					<Discreet>
+						<Value>0</Value>
+						<Display>Up</Display>
+					</Discreet>
+					<Discreet>
+						<Value>1</Value>
+						<Display>Down</Display>
+					</Discreet>
+					<Discreet>
+						<Value>2</Value>
+						<Display>Unknown</Display>
+					</Discreet>
+				</Discreets>
+			</Measurement>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<LengthType>next param</LengthType>
+				<Type>double</Type>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+		</Param>
+		<Param id="2104" setter="true">
+			<Name>Status</Name>
+			<Description>Status (Generic Table)</Description>
+			<Type>write</Type>
+			<Measurement>
+				<Type>discreet</Type>
+				<Discreets>
+					<Discreet>
+						<Value>0</Value>
+						<Display>Up</Display>
+					</Discreet>
+					<Discreet>
+						<Value>1</Value>
+						<Display>Down</Display>
+					</Discreet>
+					<Discreet>
+						<Value>2</Value>
+						<Display>Unknown</Display>
+					</Discreet>
+				</Discreets>
+			</Measurement>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<LengthType>next param</LengthType>
+				<Type>double</Type>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+		</Param>
+		<Param id="2005" trending="true">
+			<Name>LastUpdate</Name>
+			<Description>Last Update (Generic)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>A Datetime column</Subtext>
+			</Information>
+			<Measurement>
+				<Type options="datetime">number</Type>
+			</Measurement>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Decimals>8</Decimals>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>8</Decimals>
+			</Display>
+		</Param>
+		<Param id="2105" setter="true">
+			<Name>LastUpdate</Name>
+			<Description>Last Update (Generic)</Description>
+			<Type>write</Type>
+			<Measurement>
+				<Type options="datetime">number</Type>
+			</Measurement>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Decimals>8</Decimals>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>8</Decimals>
+			</Display>
+		</Param>
+		<Param id="2006" trending="true">
+			<Name>LastUpdateValue</Name>
+			<Description>Last Update Value (Generic Table)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>A numeric value</Subtext>
+			</Information>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<LengthType>next param</LengthType>
+				<Type>double</Type>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Range>
+					<Low>0</Low>
+					<High>1000</High>
+				</Range>
+			</Display>
+		</Param>
+		<Param id="2007" trending="false">
+			<Name>Event</Name>
+			<Description>Event</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="2107" setter="true">
+			<Name>Event</Name>
+			<Description>Event</Description>
+			<Type>write</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="2106" setter="true">
+			<Name>LastUpdateValue</Name>
+			<Description>Last Update Value (Generic Table)</Description>
+			<Type>write</Type>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<LengthType>next param</LengthType>
+				<Type>double</Type>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Range>
+					<Low>0</Low>
+					<High>1000</High>
+				</Range>
+			</Display>
+		</Param>
+		<Param id="2030">
+			<Name>GenericTableActions</Name>
+			<Type>write</Type>
+			<Information>
+				<Subtext>Actions (Generic Table)</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type width="110">button</Type>
+				<Discreets>
+					<Discreet>
+						<Display>Action 1</Display>
+						<Value>0</Value>
+					</Discreet>
+				</Discreets>
+			</Measurement>
+		</Param>
+		<Param id="2031">
+			<Name>GenericTable_ContextMenu</Name>
+			<Description>Context Menu for Generic Table</Description>
+			<Type>write</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>discreet</Type>
+				<Discreets>
+					<Discreet dependencyValues="2002;2003;2004;2006">
+						<Value>Add</Value>
+						<Display>Add item...</Display>
+					</Discreet>
+					<Discreet options="table:selection;confirm:The selected item(s) will be deleted permanently.">
+						<Display>Delete selected item(s)</Display>
+						<Value>Delete</Value>
+					</Discreet>
+					<!-- Typical implementation to manage table rows -->
+					<!--<Discreet dependencyValues="1002;1003?">
+						<Display>Add item...</Display>
+						<Value>1</Value>
+					</Discreet>
+					<Discreet options="table:singleSelection" dependencyValues="1002;1003?;1004:[value:1004];1005?:[value:1005]">
+						<Display>Duplicate item...</Display>
+						<Value>2</Value>
+					</Discreet>
+					<Discreet options="separator">
+						<Display>Separator 1</Display>
+						<Value>-1</Value>
+					</Discreet>
+					<Discreet options="table:singleSelection" dependencyValues="1002;1003?;1004:[value:1004];1005?:[value:1005]">
+						<Display>Edit item...</Display>
+						<Value>10</Value>
+					</Discreet>
+					<Discreet options="separator">
+						<Display>Separator 2</Display>
+						<Value>-2</Value>
+					</Discreet>
+					<Discreet options="table:selection;confirm:The selected item(s) will be deleted permanently.">
+						<Display>Delete selected item(s)</Display>
+						<Value>20</Value>
+					</Discreet>-->
+					<!-- Level must be first option in the list of options into the Discreet@options attribute -->
+					<!--<Discreet options="level:5">
+						<Display>Depends on Level Access</Display>
+						<Value>31</Value>
+					</Discreet>-->
+					<!-- Script must be last option in the list of options into the Discreet@options attribute -->
+					<!--<Discreet options="script:myScriptName|d1=[this element]|Action=START;Guid=7777777;p1=[value:1002];p2=[property:KPI1]||tooltip|options">
+						<Display>Execute Script</Display>
+						<Value>32</Value>
+					</Discreet>-->
+				</Discreets>
+			</Measurement>
+		</Param>
+		<Param id="3000" trending="false">
+			<Name>GenericInputMuxTable</Name>
+			<Description>Generic Input Mux Table</Description>
+			<Type>array</Type>
+			<ArrayOptions index="0" options="">
+				<NamingFormat><![CDATA[;3002;(;3001;)]]></NamingFormat>
+				<!--Key & Index-->
+				<ColumnOption idx="0" pid="3001" type="retrieved" value="" options=""/>
+				<ColumnOption idx="1" pid="3002" type="retrieved" value="" options=";save"/>
+				<ColumnOption idx="2" pid="3003" type="retrieved" value="" options=";save"/>
+			</ArrayOptions>
+			<Information>
+				<Text>description</Text>
+			</Information>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Generic Mux</Page>
+						<Row>0</Row>
+						<Column>0</Column>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="tab=columns:3001|0-3002|1-3003|2,width:0-200-164,sort:INT-STRING-STRING,lines:25,filter:true">table</Type>
+			</Measurement>
+		</Param>
+		<Param id="3001" trending="false">
+			<Name>GenericInputMuxInstance</Name>
+			<Description>Generic Input Mux Instance</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>Generic Input Mux Instance</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+		</Param>
+		<Param id="3002" trending="false">
+			<Name>GenericInputMuxName</Name>
+			<Description>Generic Input Mux Name</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>Generic Input Mux Name</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+		</Param>
+		<Param id="3052" setter="true">
+			<Name>GenericInputMuxName</Name>
+			<Description>Generic Input Mux Name</Description>
+			<Type>write</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+		</Param>
+		<Param id="3003" trending="false">
+			<Name>GenericInputMuxEnable</Name>
+			<Description>Generic Input Mux Enable</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>Generic Input Mux Enable</Subtext>
+			</Information>
+			<Measurement>
+				<Type>discreet</Type>
+				<Discreets>
+					<Discreet>
+						<Value>0</Value>
+						<Display>Enable</Display>
+					</Discreet>
+					<Discreet>
+						<Value>1</Value>
+						<Display>Disable</Display>
+					</Discreet>
+				</Discreets>
+			</Measurement>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<LengthType>next param</LengthType>
+				<Type>double</Type>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+		</Param>
+		<Param id="3103" setter="true">
+			<Name>GenericInputMuxEnable</Name>
+			<Description>Generic Input Mux Enable</Description>
+			<Type>write</Type>
+			<Measurement>
+				<Type>togglebutton</Type>
+				<Discreets>
+					<Discreet>
+						<Value>0</Value>
+						<Display>Enable</Display>
+					</Discreet>
+					<Discreet>
+						<Value>1</Value>
+						<Display>Disable</Display>
+					</Discreet>
+				</Discreets>
+			</Measurement>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<LengthType>next param</LengthType>
+				<Type>double</Type>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+		</Param>
+		<Param id="3100">
+			<Name>GenericInputMuxTable_ContextMenu</Name>
+			<Description>Context Menu for Generic Input Mux Table</Description>
+			<Type>write</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>discreet</Type>
+				<Discreets>
+					<Discreet dependencyValues="3002">
+						<Value>0</Value>
+						<Display>Add item...</Display>
+					</Discreet>
+					<Discreet options="table:selection;confirm:The selected item(s) will be deleted permanently.">
+						<Display>Delete selected item(s)</Display>
+						<Value>1</Value>
+					</Discreet>
+				</Discreets>
+			</Measurement>
+		</Param>
+		<Param id="4000" trending="false">
+			<Name>GenericOutputMuxTable</Name>
+			<Description>Generic Output Mux Table</Description>
+			<Type>array</Type>
+			<ArrayOptions index="0" options="">
+				<NamingFormat><![CDATA[;4002;(;4001;)]]></NamingFormat>
+				<!--Key & Index-->
+				<ColumnOption idx="0" pid="4001" type="retrieved" value="" options=""/>
+				<ColumnOption idx="1" pid="4002" type="retrieved" value="" options=";save"/>
+				<ColumnOption idx="2" pid="4003" type="retrieved" value="" options=";save"/>
+				<ColumnOption idx="3" pid="4004" type="retrieved" value="" options=";save"/>
+			</ArrayOptions>
+			<Information>
+				<Text>description</Text>
+			</Information>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Generic Mux</Page>
+						<Column>0</Column>
+						<Row>2</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="tab=columns:4001|0-4002|1-4003|2-4004|3,width:0-155-152-227,sort:INT-STRING-STRING-STRING,lines:25,filter:true">table</Type>
+			</Measurement>
+		</Param>
+		<Param id="4001" trending="false">
+			<Name>GenericOutputMuxInstance</Name>
+			<Description>Generic Output Mux Intstance</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>Generic Output Mux Intstance</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+		</Param>
+		<Param id="4002" trending="false">
+			<Name>GenericOutputMuxName</Name>
+			<Description>Generic Output Mux Name</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>Generic Output Mux Name</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+		</Param>
+		<Param id="4052" setter="true">
+			<Name>GenericOutputMuxName</Name>
+			<Description>Generic Output Mux Name</Description>
+			<Type>write</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+		</Param>
+		<Param id="4003" trending="false">
+			<Name>GenericOutputMuxInput</Name>
+			<Description>Generic Output Mux Input</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>Generic Output Mux Input</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+		</Param>
+		<Param id="4053" setter="true">
+			<Name>GenericOutputMuxInput</Name>
+			<Description>Generic Output Mux Input</Description>
+			<Type>write</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+		</Param>
+		<Param id="4004" trending="false">
+			<Name>GenericOutputMuxInputReference</Name>
+			<Description>Generic Output Mux Input Reference</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>Generic Output Mux Input Reference</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+		</Param>
+		<Param id="4100">
+			<Name>GenericOutputMuxTable_ContextMenu</Name>
+			<Description>Context Menu for Generic Input Mux Table</Description>
+			<Type>write</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>discreet</Type>
+				<Discreets>
+					<Discreet dependencyValues="4001">
+						<Value>0</Value>
+						<Display>Add item...</Display>
+					</Discreet>
+					<Discreet options="table:selection;confirm:The selected item(s) will be deleted permanently.">
+						<Display>Delete selected item(s)</Display>
+						<Value>1</Value>
+					</Discreet>
+				</Discreets>
+			</Measurement>
+		</Param>
+	</Params>
+	<QActions>
+		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" dllImport="newtonsoft.json\11.0.2\lib\net45\Newtonsoft.Json.dll;sharpziplib\0.86.0\lib\20\ICSharpCode.SharpZipLib.dll;protobuf-net.dll;SLProtoBufLibrary.dll;QAction_ClassLibrary.dll">
+			<![CDATA[namespace Skyline.Protocol
+{
+	using System;
+	using System.Linq;
+
+	namespace MyExtension
+	{
+		#region Enumerations
+		#endregion
+
+		#region Structs
+		#endregion
+
+		#region Classes
+		public class MyClass
+		{
+
+
+			#region Enumerations
+			#endregion
+
+			#region Properties
+			#endregion
+
+			#region Methods
+			#endregion
+
+			#region Structs
+			#endregion
+		}
+		#endregion
+	}
+}]]>
+		</QAction>
+		<QAction id="2" name="After Startup" encoding="csharp" triggers="2" dllImport="newtonsoft.json\11.0.2\lib\net45\Newtonsoft.Json.dll;sharpziplib\0.86.0\lib\20\ICSharpCode.SharpZipLib.dll;protobuf-net.dll;SLProtoBufLibrary.dll;QAction_ClassLibrary.dll">
+			<![CDATA[using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Text;
+
+using Skyline.DataMiner.Scripting;
+
+/// <summary>
+/// DataMiner QAction Class: After Startup.
+/// </summary>
+public static class QAction
+{
+    /// <summary>
+    /// The QAction entry point.
+    /// </summary>
+    /// <param name="protocol">Link with SLProtocol process.</param>
+    public static void Run(SLProtocol protocol)
+    {
+        try
+        {
+
+        }
+        catch (Exception ex)
+        {
+            protocol.Log("QA" + protocol.QActionID + "|" + protocol.GetTriggerParameter() + "|Run|Exception thrown:" + Environment.NewLine + ex, LogType.Error, LogLevel.NoLogging);
+        }
+    }
+}
+]]>
+		</QAction>
+		<QAction id="2031" name="OnGenericTableActions" encoding="csharp" triggers="2031" inputParameters="2031" dllImport="newtonsoft.json\11.0.2\lib\net45\Newtonsoft.Json.dll;sharpziplib\0.86.0\lib\20\ICSharpCode.SharpZipLib.dll;protobuf-net.dll;SLProtoBufLibrary.dll;QAction_ClassLibrary.dll">
+			<![CDATA[using System;
+using System.Linq;
+using Skyline.DataMiner.Scripting;
+
+/// <summary>
+/// DataMiner QAction Class: OnGenericTableActions.
+/// </summary>
+public static class QAction
+{
+	#region Public methods
+	/// <summary>
+	/// The QAction entry point.
+	/// </summary>
+	/// <param name="protocol">Link with SLProtocol process.</param>
+	/// <param name="extraData">Context menu parameter data.</param>
+	public static void Run(SLProtocolExt protocol, object extraData)
+	{
+		try
+		{
+			var sa = extraData as string[];
+			if (sa == null || sa.Length < 2)
+				return;
+
+			switch (sa[1])
+			{
+				case "Add":
+					AddRow(protocol, sa);
+					break;
+				case "Delete":
+					DeleteRows(protocol, sa.Skip(2).ToArray());
+					break;
+				default:
+					protocol.Log(
+						string.Format(">>>QA{0} Unknown action {1}", protocol.QActionID, sa[1]),
+						LogType.Allways,
+						LogLevel.LogEverything);
+					break;
+			}
+		}
+		catch (Exception ex)
+		{
+			protocol.Log(
+				"QA" +
+					protocol.QActionID +
+					"|" +
+					protocol.GetTriggerParameter() +
+					"|Run|Exception thrown:" +
+					Environment.NewLine +
+					ex,
+				LogType.Error,
+				LogLevel.NoLogging);
+		}
+	}
+	#endregion
+
+	#region Private methods
+	private static void AddRow(SLProtocolExt protocol, string[] sa)
+	{
+		object[] row = new object[]
+		{
+			Guid.NewGuid().ToString(),
+			sa[2],
+			sa[3],
+			Convert.ToDouble(sa[4]),
+			DateTime.Now.ToOADate(),
+			Convert.ToDouble(sa[5]),
+			0,
+		};
+		protocol.AddRow(Parameter.Generictable.tablePid, row);
+	}
+
+	private static void DeleteRows(SLProtocolExt protocol, string[] ids)
+	{
+		foreach (string id in ids)
+		{
+			protocol.DeleteRow(Parameter.Generictable.tablePid, id);
+		}
+	}
+	#endregion
+}]]>
+		</QAction>
+		<QAction id="3100" name="Generic Input Mux Table - ContextMenu" encoding="csharp" triggers="3100" dllImport="skyline.dataminer.utils.table.contextmenu\1.0.0.1\lib\net462\Skyline.DataMiner.Utils.Table.ContextMenu.dll">
+			<![CDATA[using System;
+using QAction_3100;
+using Skyline.DataMiner.Scripting;
+
+//---------------------------------
+// QAction_3100.cs
+//---------------------------------
+
+/// <summary>
+/// DataMiner QAction Class: Generic Input Mux Table - ContextMenu.
+/// </summary>
+public static class QAction
+{
+    /// <summary>
+    /// The QAction entry point.
+    /// </summary>
+    /// <param name="protocol">Link with SLProtocol process.</param>
+    /// <param name="contextMenuData"><see cref="object"/> containing the table ContextMenu data.</param>
+    public static void Run(SLProtocolExt protocol, object contextMenuData)
+    {
+        try
+        {
+            ContextMenuGenericInputMuxTable contextMenu = new ContextMenuGenericInputMuxTable(
+                protocol,
+                contextMenuData,
+                3000);
+            contextMenu.ProcessContextMenuAction();
+        }
+        catch (Exception ex)
+        {
+            protocol.Log("QA" + protocol.QActionID + "|" + protocol.GetTriggerParameter() + "|Run|Exception thrown:" + Environment.NewLine + ex, LogType.Error, LogLevel.NoLogging);
+        }
+    }
+}
+//---------------------------------
+// ContextMenuGenericInputMuxTable.cs
+//---------------------------------
+namespace QAction_3100
+{
+    using System;
+    using Skyline.DataMiner.Scripting;
+    using Skyline.DataMiner.Utils.Table.ContextMenu;
+
+    internal enum Action
+	{
+		Additem = 0,
+		DeleteItem = 1,
+	}
+
+    internal class ContextMenuGenericInputMuxTable : ContextMenu<Action>
+	{
+		public ContextMenuGenericInputMuxTable(SLProtocol protocol, object contextMenuData, int tablePid) : base(
+			protocol,
+			contextMenuData,
+			tablePid)
+		{
+		}
+
+		public override void ProcessContextMenuAction()
+		{
+			switch(Action)
+			{
+				case Action.Additem:
+					Protocol.Log(
+						"QA" + Protocol.QActionID + "|ContextMenuGenericInputMuxTable|ProcessContextMenuAction|Additem",
+						LogType.DebugInfo,
+						LogLevel.NoLogging);
+					AddRow(Protocol, TablePid, Data);
+					break;
+				case Action.DeleteItem:
+					Protocol.Log(
+						"QA" +
+							Protocol.QActionID +
+							"|ContextMenuGenericInputMuxTable|ProcessContextMenuAction|Deleteselecteditem_40_s_41_",
+						LogType.DebugInfo,
+						LogLevel.NoLogging);
+					DeleteRows(Protocol, TablePid, Data);
+					break;
+				default:
+					Protocol.Log(
+						"QA" +
+							Protocol.QActionID +
+							"|ContextMenuGenericInputMuxTable|Process|Unexpected ContextMenu value '" +
+							ActionRaw +
+							"'",
+						LogType.Error,
+						LogLevel.NoLogging);
+					break;
+			}
+		}
+
+		private static void AddRow(SLProtocol protocol, int tableId, string[] sa)
+		{
+			object[] row = new object[] { Guid.NewGuid().ToString(), sa[0], 0.0, };
+			protocol.AddRow(tableId, row);
+		}
+
+		private static void DeleteRows(SLProtocol protocol, int tableId, string[] ids)
+		{
+			foreach(string id in ids)
+			{
+				protocol.DeleteRow(tableId, id);
+			}
+		}
+	}
+
+}]]>
+		</QAction>
+		<QAction id="4100" name="Generic Output Mux Table - ContextMenu" encoding="csharp" triggers="4100" dllImport="skyline.dataminer.utils.table.contextmenu\1.0.0.1\lib\net462\Skyline.DataMiner.Utils.Table.ContextMenu.dll">
+			<![CDATA[using System;
+using QAction_4100;
+using Skyline.DataMiner.Scripting;
+
+//---------------------------------
+// QAction_4100.cs
+//---------------------------------
+
+/// <summary>
+/// DataMiner QAction Class: Generic Output Mux Table - ContextMenu.
+/// </summary>
+public static class QAction
+{
+    /// <summary>
+    /// The QAction entry point.
+    /// </summary>
+    /// <param name="protocol">Link with SLProtocol process.</param>
+    /// <param name="contextMenuData"><see cref="object"/> containing the table ContextMenu data.</param>
+    public static void Run(SLProtocol protocol, object contextMenuData)
+    {
+        try
+        {
+            ContextMenuGenericOutputMuxTable contextMenu = new ContextMenuGenericOutputMuxTable(
+                protocol,
+                contextMenuData,
+                4000);
+            contextMenu.ProcessContextMenuAction();
+        }
+        catch (Exception ex)
+        {
+            protocol.Log("QA" + protocol.QActionID + "|" + protocol.GetTriggerParameter() + "|Run|Exception thrown:" + Environment.NewLine + ex, LogType.Error, LogLevel.NoLogging);
+        }
+    }
+}
+//---------------------------------
+// ContextMenuGenericOutputMuxTable.cs
+//---------------------------------
+namespace QAction_4100
+{
+
+	using System;
+	using Skyline.DataMiner.Scripting;
+	using Skyline.DataMiner.Utils.Table.ContextMenu;
+
+	internal enum Action
+	{
+		Additem = 0,
+		DeleteItem = 1,
+	}
+
+	internal class ContextMenuGenericOutputMuxTable : ContextMenu<Action>
+	{
+		public ContextMenuGenericOutputMuxTable(SLProtocol protocol, object contextMenuData, int tablePid) : base(
+			protocol,
+			contextMenuData,
+			tablePid)
+		{
+		}
+
+		public override void ProcessContextMenuAction()
+		{
+			switch(Action)
+			{
+				case Action.Additem:
+					Protocol.Log(
+						"QA" + Protocol.QActionID + "|ContextMenuGenericOutputMuxTable|ProcessContextMenuAction|Additem",
+						LogType.DebugInfo,
+						LogLevel.NoLogging);
+					AddRow(Protocol, TablePid, Data);
+					break;
+				case Action.DeleteItem:
+					Protocol.Log(
+						"QA" +
+							Protocol.QActionID +
+							"|ContextMenuGenericOutputMuxTable|ProcessContextMenuAction|Deleteselecteditem_40_s_41_",
+						LogType.DebugInfo,
+						LogLevel.NoLogging);
+					DeleteRows(Protocol, TablePid, Data);
+					break;
+				default:
+					Protocol.Log(
+						"QA" +
+							Protocol.QActionID +
+							"|ContextMenuGenericOutputMuxTable|Process|Unexpected ContextMenu value '" +
+							ActionRaw +
+							"'",
+						LogType.Error,
+						LogLevel.NoLogging);
+					break;
+			}
+		}
+
+		private static void AddRow(SLProtocol protocol, int tableId, string[] sa)
+		{
+			object[] row = new object[] { Guid.NewGuid().ToString(), sa[0], string.Empty, string.Empty };
+			protocol.AddRow(tableId, row);
+		}
+
+		private static void DeleteRows(SLProtocol protocol, int tableId, string[] ids)
+		{
+			foreach(string id in ids)
+			{
+				protocol.DeleteRow(tableId, id);
+			}
+		}
+	}
+
+}]]>
+		</QAction>
+		<QAction id="4053" name="Generic Output Mux Change" encoding="csharp" triggers="4053" row="true" inputParameters="4053" dllImport="newtonsoft.json\13.0.2\lib\net45\Newtonsoft.Json.dll;skyline.dataminer.core.dataminersystem.common\1.1.0.5\lib\net462\Skyline.DataMiner.Core.DataMinerSystem.Common.dll;skyline.dataminer.core.dataminersystem.protocol\1.1.0.5\lib\net462\Skyline.DataMiner.Core.DataMinerSystem.Protocol.dll">
+			<![CDATA[using System;
+using Skyline.DataMiner.Scripting;
+
+/// <summary>
+/// DataMiner QAction Class: Generic Output Mux Change.
+/// </summary>
+public static class QAction
+{
+	/// <summary>
+	/// The QAction entry point.
+	/// </summary>
+	/// <param name="protocol">Link with SLProtocol process.</param>
+	/// <param name="data">Entered input name.</param>
+	public static void Run(SLProtocolExt protocol, object data)
+	{
+		try
+		{
+			var input = Convert.ToString(data);
+			var inputTable = new QActionTable(protocol, 3000, "GenericInputMuxTable");
+			foreach(var key in inputTable.Keys)
+			{
+				if(Convert.ToString(inputTable[key][1]) == input)
+				{
+					protocol.SetParameterIndexByKey(4000, protocol.RowKey(), 4, key);
+					return;
+				}
+			}
+
+			protocol.SetParameterIndexByKey(4000, protocol.RowKey(), 4, string.Empty);
+		}
+		catch(Exception ex)
+		{
+			protocol.Log(
+				$"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown:{Environment.NewLine}{ex}",
+				LogType.Error,
+				LogLevel.NoLogging);
+		}
+	}
+}]]>
+		</QAction>
+	</QActions>
+	<Groups>
+		<Group id="2">
+			<Name>After Startup</Name>
+			<Description>After Startup</Description>
+			<Type>poll action</Type>
+			<Content>
+				<Action>2</Action>
+			</Content>
+		</Group>
+	</Groups>
+	<Triggers>
+		<Trigger id="1">
+			<Name>After Startup</Name>
+			<On>protocol</On>
+			<Time>after startup</Time>
+			<Type>action</Type>
+			<Content>
+				<Id>1</Id>
+			</Content>
+		</Trigger>
+	</Triggers>
+	<Actions>
+		<Action id="1">
+			<Name>After Startup Group</Name>
+			<On id="2">group</On>
+			<Type>execute next</Type>
+		</Action>
+		<Action id="2">
+			<Name>After Startup QAction</Name>
+			<On id="2">parameter</On>
+			<Type>run actions</Type>
+		</Action>
+	</Actions>
+	<Timers>
+		<Timer id="1">
+			<Name>Fast Timer (10s)</Name>
+			<Time initial="true">10000</Time>
+			<Interval>75</Interval>
+			<Content>
+			</Content>
+		</Timer>
+		<Timer id="2">
+			<Name>Medium Timer (1m)</Name>
+			<Time initial="true" dataDisplay="30000">60000</Time>
+			<Interval>75</Interval>
+			<Content>
+			</Content>
+		</Timer>
+		<Timer id="3">
+			<Name>Slow Timer (1h)</Name>
+			<Time initial="true">3600000</Time>
+			<Interval>75</Interval>
+			<Content>
+			</Content>
+		</Timer>
+	</Timers>
+	<VersionHistory>
+		<Branches>
+			<Branch id="1">
+				<Comment>Main Branch</Comment>
+				<SystemVersions>
+					<SystemVersion id="0">
+						<MajorVersions>
+							<MajorVersion id="0">
+								<MinorVersions>
+									<MinorVersion id="2">
+										<Date>2022-08-25</Date>
+										<Provider>
+											<Author>GMV</Author>
+											<Company>Skyline Communications</Company>
+										</Provider>
+										<Changes>
+											<NewFeature>Initial version</NewFeature>
+											<NewFeature>Added generic input and output mux tables</NewFeature>
+										</Changes>
+									</MinorVersion>
+								</MinorVersions>
+							</MajorVersion>
+						</MajorVersions>
+					</SystemVersion>
+				</SystemVersions>
+			</Branch>
+		</Branches>
+	</VersionHistory>
+</Protocol>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DMSScript options="272" xmlns="http://www.skyline.be/automation">
+	<Name>CreateResourceOrchestrationBooking</Name>
+	<Description>A sample script to create a resource orchestration booking</Description>
+	<Type>Automation</Type>
+	<Author>Skyline\Gelber</Author>
+	<CheckSets>FALSE</CheckSets>
+	<Folder>Tests</Folder>
+
+	<Protocols>
+	</Protocols>
+
+	<Memory>
+	</Memory>
+
+	<Parameters>
+		<ScriptParameter id="10" type="string" values="">
+			<Description>Title</Description>
+		</ScriptParameter>
+		<ScriptParameter id="11" type="string" values="">
+			<Description>StartTime</Description>
+		</ScriptParameter>
+		<ScriptParameter id="12" type="string" values="">
+			<Description>StopTime</Description>
+		</ScriptParameter>
+		<ScriptParameter id="13" type="string" values="">
+			<Description>Resources</Description>
+		</ScriptParameter>
+		<ScriptParameter id="14" type="string" values="">
+					<Description>Action</Description>
+		</ScriptParameter>	
+	</Parameters>
+
+	<Script>
+		<Exe id="1" type="csharp">
+			<Value><![CDATA[[Project:CreateResourceOrchestrationBooking_1]]]></Value>
+			<Param type="debug">true</Param>
+			<Message></Message>
+		</Exe>
+	</Script>
+</DMSScript>
